@@ -2,6 +2,18 @@
  * Globals
  */
 
+ :root{
+    /*Colors*/
+    --primaryColor:#54115B;
+    --grayBackgroundColor:#F6F6F6;
+    --helpcolor:#FFB000;
+
+    /*Text Color*/    
+    --textColor:#2E2C36;
+
+    /*Font*/
+    --urbanistFont: font-family: "Urbanist", sans-serif;
+ }
 
 /* Custom default button */
 .btn-light,
@@ -26,11 +38,11 @@
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: var(--urbanistFont)
 }
 
 footer {
-    background-color: #8E2B87;
+    background-color: var(--primaryColor)
 }
 
 footer p {
@@ -43,8 +55,18 @@ footer p {
  */
 
 .nav-masthead .nav-link {
-    color: rgba(255, 255, 255, .5);
+    color:var(--textColor);
     border-bottom: .25rem solid transparent;
+    text-align: center;
+}
+
+.nav-masthead .nav-link.soporte {
+    background-color: var(--helpcolor);
+}
+
+.nav-masthead .nav-link svg{
+    max-width: 20px;
+    
 }
 
 .nav-masthead .nav-link:hover,
@@ -57,10 +79,11 @@ footer p {
 }
 
 .nav-masthead .active {
-    color: #fff;
-    border-bottom-color: #fff;
+    color: var(--primaryColor);
+    border-bottom-color: var(--primaryColor)
 }
 
 #canvas {
     display: block;
 }
+
