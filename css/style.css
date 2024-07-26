@@ -1,0 +1,172 @@
+/*
+ * Globals
+ */
+
+:root {
+  /*Colors*/
+  --primaryColor: rgb(84, 17, 91);
+  --grayBackgroundColor: #F6F6F6;
+  --helpcolor: #FFB000;
+  --secondcolor: #CE0080;
+  --bluecolor:#009BD8;
+
+  /*Text Color*/
+  --textColor: #2E2C36;
+
+  /*Font*/
+  --urbanistFont: font-family: "Urbanist", sans-serif;
+}
+
+.bg-primaryColor {
+  background-color: var(--primaryColor);
+  /* ejemplo de color oscuro */
+}
+
+.text-primarycolor {
+  color: var(--primaryColor);
+}
+
+.bg-light {
+  background-color: #ffffff;
+  /* ejemplo de color oscuro */
+}
+
+/*Header*/
+nav {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.textmenu-white {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+.menu-item-dark {
+  color: var(--primaryColor);
+  /* Color del texto en el menú cuando se agrega la clase bg-dark */
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: var(--secondcolor);
+}
+
+.shadow {
+  box-shadow: 0 4px 8px rgba(84, 17, 91, 0.3);
+}
+
+#logo {
+  transition: transform 0.3s ease;
+}
+
+.small-logo {
+  transform: scale(0.9);
+  content: url('../img/logo-evolution-color.png');
+}
+@media only screen and (max-width: 400px) {
+  .navbar-toggler {
+    background-color: var(--primaryColor);
+  }
+}
+
+
+/** Slide text**/
+.slide-text {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+.slide-text h1 {
+  padding-right: 20px;
+  color: white;
+}
+.slide-text .textanimated {
+  overflow:hidden;
+}
+.slide-text ul, .slide-text li {
+  list-style: none;
+}
+.slide-text ul {
+  width: 20rem;
+  height: 70px;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  animation: slidetext 5s cubic-bezier(0.4, 0, 1, 1) infinite;
+}
+ @media only screen and (max-width: 400px) {
+  .slide-text ul {
+    width: 12rem;
+  }  
+  .slide-text .fs-1 {
+    font-size: 1.5rem !important;
+  }
+  .slide-text h1 {
+    padding-right: 10px;
+  }
+}
+
+.slide-text li {
+  position: absolute;
+  height: 70px;
+  top: 200%;
+  line-height: 70px;
+}
+.slide-text li:first-child {
+  top: 100%;
+}
+.slide-text li:last-child {
+  top: 300%;
+}
+@keyframes slidetext {
+  0% {
+    transform: translateY(0);
+  }
+  15%, 30% {
+    transform: translateY(-100%);
+  }
+  45%, 60% {
+    transform: translateY(-200%);
+  }
+  75%, 90% {
+    transform: translateY(-300%);
+  }
+  100% {
+    transform: translateY(-400%);
+  }
+}
+/*Modulos**/
+
+.card {
+  border-image: linear-gradient(60deg, var(--primaryColor), var(--secondcolor), var(--helpcolor), var(--bluecolor)) 1;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 55px;
+}
+.card {
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(to right, var(--primaryColor), var(--secondcolor), var(--helpcolor), var(--bluecolor)) border-box;
+  border-radius: 15px;
+  border: 2px solid transparent;
+}
+a.btn-primary {
+  background:var(--secondcolor);
+  border: var(--secondcolor);
+}
+a.btn-primary:hover {
+  background:var(--helpcolor);
+  border: var(--helpcolor);
+}
+
+/*Contacto*/
+
+.contacto {
+  background-image: url(../img/cerebro.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size:contain;
+}
+
+/*Footer*/
+
+footer a {
+  color: var(--primaryColor);
+}
